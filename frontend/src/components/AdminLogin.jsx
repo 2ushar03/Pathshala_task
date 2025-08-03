@@ -16,7 +16,7 @@ const AdminLogin = () => {
     e.preventDefault();
     setError('');
     try {
-      const res = await fetch('http://localhost:5000/api/admin/login', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(credentials)
@@ -40,11 +40,11 @@ const AdminLogin = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Email</label>
-          <input name="email" type="email" value={credentials.email} onChange={handleChange} required />
+          <input name="email" type="email" placeholder="admin@gmail.com" value={credentials.email} onChange={handleChange} required />
         </div>
         <div className="form-group">
           <label>Password</label>
-          <input name="password" type="password" value={credentials.password} onChange={handleChange} required />
+          <input name="password" type="password" placeholder="admin123" value={credentials.password} onChange={handleChange} required />
         </div>
         <div className="buttons">
           <button type="submit">Login</button>
