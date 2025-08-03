@@ -1,0 +1,154 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+/* Form container */
+.form-wrapper {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #555;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.buttons.flex-column {
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Button styles */
+button, .button-link, .btn-secondary {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #0077ff;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .button-link:hover, .btn-secondary:hover {
+  background-color: #005fcc;
+}
+
+.btn-secondary {
+  background-color: #555;
+  margin-top: 10px;
+}
+
+/* Messages */
+.message {
+  margin-top: 1rem;
+  text-align: center;
+  color: green;
+}
+
+/* Admin panel */
+.admin-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.admin-wrapper h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Table */
+.table-responsive {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+thead {
+  background: #0077ff;
+  color: white;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  table, thead, tbody, th, td, tr {
+    font-size: 0.85rem;
+  }
+}
+select {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  appearance: none; /* Remove default arrow for consistent look */
+  background: white url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200l5%207%205-7H0z%22%20fill%3D%22%23777%22/%3E%3C/svg%3E") no-repeat right 0.8rem center;
+  background-size: 10px 7px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
